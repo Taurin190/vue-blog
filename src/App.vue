@@ -11,19 +11,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="dropdown-menu dropdown-menu-right">
           <li class="nav-item dropdown-item">
-            <a class="nav-link" href="#">Home</a>
+            <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item dropdown-item">
-            <a class="nav-link" href="about.html">Profile</a>
+            <router-link class="nav-link" to="/profile">Profile</router-link>
           </li>
           <li class="nav-item dropdown-item">
-            <a class="nav-link" href="works.html">Works</a>
+            <router-link class="nav-link" to="/works">Works</router-link>
           </li>
           <li class="nav-item dropdown-item">
-            <a class="nav-link" href="list.html">Blog</a>
+            <router-link class="nav-link" to="/blog">Blog</router-link>
           </li>
           <li class="nav-item dropdown-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <router-link class="nav-link" to="/contact">Contact</router-link>
           </li>
         </ul>
       </div>
@@ -33,16 +33,16 @@
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Profile</a>
+            <router-link class="nav-link" to="/profile">Profile</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="works.html">Works</a>
+            <router-link class="nav-link" to="/works">Works</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="list.html">Blog</a>
+            <router-link class="nav-link" to="/blog">Blog</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <router-link class="nav-link" to="/contact">Contact</router-link>
           </li>
         </ul>
       </div>
