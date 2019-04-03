@@ -14,10 +14,7 @@
 </template>
 <script>
 export default {
-  name: 'ProfileOverview',
-  props: {
-    msg: String
-  }
+  name: 'ProfileOverview'
 }
 </script>
 <style>

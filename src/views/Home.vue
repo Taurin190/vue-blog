@@ -14,7 +14,7 @@
       </div>
     </header>
   <div class="main container">
-    <ProfileOverview msg="hoge" />
+    <ProfileOverview />
     <BlogList />
   </div>
 </div>
