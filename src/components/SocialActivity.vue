@@ -14,15 +14,25 @@
     </div>
     <div class="col-lg-6 col-md-6 rounded float-right">
       <h3 class="subheading">Booklog</h3>
-      <!-- <script type="text/javascript" src="http://widget.booklog.jp/blogparts/js/booklog_minishelf.js?default" id="booklog_minishelf"></script> -->
-      <!-- <script type="text/javascript" src="http://api.booklog.jp/json/taurin190?category=0&count=40&callback=booklog_minishelf"></script> -->
+      <!-- <script type="text/javascript" src="http://widget.booklog.jp/blogparts/js/booklog_minishelf.js?default" id="booklog_minishelf"></script>
+      <script type="text/javascript" src="http://api.booklog.jp/json/taurin190?category=0&count=40&callback=booklog_minishelf"></script> -->
     </div>
   </div>
 </div>
 </template>
 <script>
 export default {
-  name: 'SocialActivity'
+  name: 'SocialActivity',
+  head() {
+    return {
+      script: [
+        {src: 'https://ikuwow.github.io/yourcontributions/widget.min.js'},
+        {src: 'https://platform.twitter.com/widgets.js', async: true},
+        {src: 'http://widget.booklog.jp/blogparts/js/booklog_minishelf.js?default'},
+        {src: 'http://api.booklog.jp/json/taurin190?category=0&count=40&callback=booklog_minishelf'}
+      ]
+    }
+  }
 }
 </script>
 <style>
