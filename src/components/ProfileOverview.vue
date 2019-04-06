@@ -30,6 +30,7 @@ export default {
       var vm = this;
       const user = firebaseDB.collection('users').doc('1');
       user.get().then(function(doc) {
+        console.log(doc.size);
         if (doc.exists) {
           console.log("Document data:", doc.data());
           vm.profileData = doc.data();
