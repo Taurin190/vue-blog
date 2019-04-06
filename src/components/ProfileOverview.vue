@@ -7,19 +7,17 @@
           {{ profileData.self_introduction }}
         </div>
         <div class="float-right col-lg-4 col-md-5 mx-auto">
-          <img class="img-profile img-fluid img-thumbnail" src="../assets/koichitaura.jpg">
+          <img class="img-profile img-fluid img-thumbnail" :src="profileData.image">
         </div>
       </div>
     </div>
 </template>
 <script>
-import firebase from "firebase/app";
 import {firebaseDB} from '../main'
 
 export default {
   name: 'ProfileOverview',
   mounted: function() {
-    // this.postProfile();
     this.loadProfile();
   },
   data() {
