@@ -4,13 +4,19 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
+    state: {
+        blogList: [],
+        profile: null
+    },
+    mutations: {
+        updateProfile(state, profile) {
+            state.profile = profile;
+        },
+        updateBlogList(state, blogList) {
+            state.blogList = blogList;
+        }
+    },
+    actions: {
 
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  }
+    }
 })

@@ -2,7 +2,7 @@
 <div class="row">
   <div id="blog" class="col-lg-8 col-md-10 mx-auto">
     <h2 class="contents-title">Blogs</h2>
-    <div v-for="blog in blogList" :key="blog.id">
+    <div v-for="blog in storedBlogList" :key="blog.id">
       <div class="post-preview">
         <a :href="'/blog/' + blog.english_title">
           <h3 class="post-title">
@@ -35,11 +35,20 @@ export default {
         blogList: []
       }
     },
+    computed : {
+      storedBlogList () {
+        return this.$store.state.blogList;
+      },
+      storedBlogListLength () {
+        return this.$store.state.blogList.length;
+      }
+    },
     mounted: function() {
       this.loadBlogList();
     },
     methods: {
       loadBlogList() {
+        if (this.$store.blogList.length > 0) return;
         var vm = this;
         const blogs = firebaseDB.collection('blogs');
         blogs.get().then( (snap) => {
@@ -50,6 +59,7 @@ export default {
           snap.docs.forEach(function(doc) {
             vm.blogList.push(doc.data());
           });
+          vm.$store.commit('updateBlogList', vm.blogList);
         });
       }
     }
