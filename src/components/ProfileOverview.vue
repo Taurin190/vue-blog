@@ -3,8 +3,8 @@
       <div id="profile" class="col-lg-8 col-md-10 mx-auto rounded profile-area ">
         <h2 class="contents-title">Profile</h2>
         <div class="float-left col-lg-8 col-md-7 profile-detail">
-          <h3>Taura, Koichi</h3>
-          東京でソフトウェアエンジニアとして働いていて。 PHP, Java, Pythonでバックエンドの開発を行っています。 Docker/Kubernetesへの環境構築移行も行なっております。
+          <h3>{{ profileData.name }}</h3>
+          {{ profileData.self_introduction }}
         </div>
         <div class="float-right col-lg-4 col-md-5 mx-auto">
           <img class="img-profile img-fluid img-thumbnail" src="../assets/koichitaura.jpg">
@@ -13,8 +13,36 @@
     </div>
 </template>
 <script>
+import firebase from "firebase/app";
+import {firebaseDB} from '../main'
+
 export default {
-  name: 'ProfileOverview'
+  name: 'ProfileOverview',
+  mounted: function() {
+    // this.postProfile();
+    this.loadProfile();
+  },
+  data() {
+    return {
+      profileData: Object
+    }
+  },
+  methods: {
+    loadProfile () {
+      var vm = this;
+      const user = firebaseDB.collection('users').doc('1');
+      user.get().then(function(doc) {
+        if (doc.exists) {
+          console.log("Document data:", doc.data());
+          vm.profileData = doc.data();
+        } else {
+          console.log("No such document!");
+        }
+      }).catch(function(error) {
+        console.log("Error getting document:", error);
+      });
+    }
+  }
 }
 </script>
 <style>
