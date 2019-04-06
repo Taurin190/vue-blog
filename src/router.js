@@ -5,6 +5,7 @@ import Profile from './views/Profile.vue'
 import Works from './views/Works.vue'
 import Contact from './views/Contact.vue'
 import Blog from './views/Blog.vue'
+import Detail from './views/Detail.vue'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
             path: '/blog',
             name: 'blog',
             component: Blog
+        },
+        {
+            path: '/blog/:english_title',
+            name: 'detail',
+            component: Detail
         },
         {
             path: '/about',
