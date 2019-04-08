@@ -16,6 +16,11 @@ export default new Vuex.Store({
             state.blogList = blogList;
         }
     },
+    getters: {
+        getBlogByTitle: (state) => (title) => {
+            return state.blogList.find(blog => blog.english_title === title);
+        }
+    },
     actions: {
 
     }

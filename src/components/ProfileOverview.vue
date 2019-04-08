@@ -1,6 +1,6 @@
 <template>
 <div class="row">
-      <div id="profile" class="col-lg-8 col-md-10 mx-auto rounded profile-area ">
+      <div v-if="profile != null" id="profile" class="col-lg-8 col-md-10 mx-auto rounded profile-area ">
         <h2 class="contents-title">Profile</h2>
         <div class="float-left col-lg-8 col-md-7 profile-detail">
           <h3>{{ profile.name }}</h3>
@@ -17,12 +17,12 @@ import {firebaseDB} from '../main'
 
 export default {
   name: 'ProfileOverview',
-  mounted: function() {
-    this.loadProfile();
-  },
   data() {
     return {
     }
+  },
+  beforeMount() {
+    this.loadProfile();
   },
   computed: {
     profile () {

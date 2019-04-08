@@ -22,6 +22,11 @@ export default {
         blog: Object
       }
     },
+    computed: {
+      blogDetail() {
+        return this.$store.getters.getBlogByTitle(vm.$route.params.english_title);
+      }
+    },
     mounted: function() {
         this.loadBlogDetail();
     },
