@@ -13,11 +13,18 @@ export default {
   components: {
     BlogList
   },
+  data() {
+    return {
+      blogTitle: ''
+    }
+  },
   head: {
-    title: {
-      inner: 'Blog List',
-      separator: '-',
-      complement: 'Lighting up a Corner'
+    title: function() {
+      return {
+        inner: this.blogTitle,
+        separator: '-',
+        complement: 'Lighting up a Corner'
+      }
     }
   }
 }
