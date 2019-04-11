@@ -30,6 +30,13 @@ export default {
   components: {
     ProfileOverview,
     BlogList
+  },
+  head: {
+    title: {
+      inner: 'Lighting up a Corner',
+      separator: '-',
+      complement: 'Koichi Taura\'s Page'
+    }
   }
 }
 </script>

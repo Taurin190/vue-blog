@@ -12,6 +12,13 @@ export default {
   components: {
     ProfileOverview,
     BlogList
+  },
+  head: {
+    title: {
+      inner: 'Work List',
+      separator: '-',
+      complement: 'Lighting up a Corner'
+    }
   }
 }
 </script>

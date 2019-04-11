@@ -10,6 +10,13 @@
 </template>
 <script>
 export default {
-  name: 'notfound'
+  name: 'notfound',
+  head: {
+    title: {
+      inner: 'Not Found',
+      separator: '-',
+      complement: 'Lighting up a Corner'
+    }
+  }
 }
 </script>

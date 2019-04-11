@@ -10,6 +10,18 @@ export default {
   name: 'detail',
   components: {
     BlogDetail
+  },
+  data() {
+    return {
+      blogTitle: ''
+    }
+  },
+  head: {
+    title: {
+      inner: '',
+      separator: '-',
+      complement: 'Lighting up a Corner'
+    }
   }
 }
 </script>

@@ -56,6 +56,13 @@ export default {
   components: {
     ProfileOverview,
     BlogList
+  },
+  head: {
+    title: {
+      inner: 'Contact',
+      separator: '-',
+      complement: 'Lighting up a Corner'
+    }
   }
 }
 </script>

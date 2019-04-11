@@ -13,6 +13,13 @@ export default {
   components: {
     ProfileOverview,
     SocialActivity
+  },
+  head: {
+    title: {
+      inner: 'Profile of Koichi Taura',
+      separator: '-',
+      complement: 'Lighting up a Corner'
+    }
   }
 }
 </script>
