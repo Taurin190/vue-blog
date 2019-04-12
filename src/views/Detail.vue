@@ -27,7 +27,6 @@ export default {
   },
   methods: {
     updateTitle: function(blogTitle) {
-      console.log(blogTitle);
       this.blogTitle = blogTitle;
     }
   }

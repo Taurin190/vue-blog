@@ -32,9 +32,6 @@ export default {
     },
     mounted: function() {
         if (this.loadBlogDetail()) {
-          console.log("aaa");
-          console.log(this.blogTitle);
-          console.log("aaa");
           this.$emit('update-blog-title', this.blogTitle);
         }
     },
