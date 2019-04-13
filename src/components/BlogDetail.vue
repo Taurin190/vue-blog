@@ -1,5 +1,4 @@
 <template>
-  <!-- Post Content -->
   <article>
     <div class="container">
       <div class="row">
@@ -38,11 +37,11 @@ export default {
     methods: {
         loadBlogDetail() {
           var vm = this;
-          var title = vm.$route.params.english_title;
+          var english_title = vm.$route.params.english_title;
           if (this.blogDetail != null) {
             return true;
           }
-          const blogs = firebaseDB.collection('blogs').where('english_title', '==', title);
+          const blogs = firebaseDB.collection('blogs').where('english_title', '==', english_title);
           vm.blogList = [];
           blogs.get().then( (snap) => {
           if (snap.size == 0) {

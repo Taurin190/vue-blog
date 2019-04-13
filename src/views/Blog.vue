@@ -1,6 +1,6 @@
 <template>
-<div class="container">
-    <BlogList />
+<div class="main container">
+    <BlogList class="main-contents" />
 </div>
 </template>
 

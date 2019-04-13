@@ -17,11 +17,13 @@
             {{ blog.published_date }}
           </p>
         </div>
-      <hr>
       </div>
       <!-- Pager -->
-      <div class="clearfix">
+      <div v-if="isTop" class="clearfix">
         <a class="btn btn-primary float-right" href="/blog">Older Posts &rarr;</a>
+      </div>
+      <div v-else class="clearfix">
+
       </div>
     </div>
     <div v-else>
@@ -37,6 +39,12 @@ import {firebaseDB} from '../main'
 
 export default {
     name: "BlogList",
+    props: {
+      isTop: {
+        type:Boolean,
+        default: false
+      }
+    },
     data() {
       return {
         blogList: []

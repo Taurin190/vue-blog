@@ -15,7 +15,7 @@
     </header>
   <div class="main container">
     <ProfileOverview />
-    <BlogList />
+    <BlogList :isTop="true" />
   </div>
 </div>
 </template>
