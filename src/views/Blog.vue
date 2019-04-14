@@ -13,15 +13,10 @@ export default {
   components: {
     BlogList
   },
-  data() {
-    return {
-      blogTitle: ''
-    }
-  },
   head: {
     title: function() {
       return {
-        inner: this.blogTitle,
+        inner: 'Blog List',
         separator: '-',
         complement: 'Lighting up a Corner'
       }
