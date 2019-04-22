@@ -4,7 +4,7 @@
     <div class="main-contents col-lg-8 col-md-10 mx-auto">
       <h1>Contact Me</h1>
       <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
-      <form name="sentMessage" id="contactForm" novalidate>
+      <form name="sentMessage" id="contactForm">
         <div class="control-group">
           <div class="form-group floating-label-form-group controls">
             <label>Name</label>
