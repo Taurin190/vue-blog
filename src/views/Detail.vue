@@ -16,15 +16,6 @@ export default {
       blogTitle: ''
     }
   },
-  head: {
-    title: function() {
-      return {
-        inner: this.blogTitle,
-        separator: '-',
-        complement: 'Lighting up a Corner'
-      }
-    }
-  },
   methods: {
     updateTitle: function(blogTitle) {
       this.blogTitle = blogTitle;

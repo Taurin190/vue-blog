@@ -57,6 +57,11 @@ export default {
                 maxlength: 255
             }
         }
+    },
+    methods: {
+        sendMail: function () {
+            
+        }
     }
 }
 </script>

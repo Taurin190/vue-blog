@@ -21,6 +21,13 @@ export default {
         blog: Object
       }
     },
+    head: {
+      title: function() {
+        return {
+          inner: this.blogDetail.title + " - Lighting up a Corner"
+        }
+      }
+    },
     computed: {
       blogDetail() {
         return this.$store.getters.getBlogByTitle(this.$route.params.english_title);
