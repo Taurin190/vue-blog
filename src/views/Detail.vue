@@ -11,11 +11,6 @@ export default {
   components: {
     BlogDetail
   },
-  data() {
-    return {
-      blogTitle: ''
-    }
-  },
   methods: {
     updateTitle: function(blogTitle) {
       this.blogTitle = blogTitle;

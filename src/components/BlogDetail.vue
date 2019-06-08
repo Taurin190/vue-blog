@@ -22,7 +22,7 @@ export default {
       }
     },
     head: {
-      title: function() {
+      title() {
         return {
           inner: this.blogDetail.title + " - Lighting up a Corner"
         }
@@ -32,9 +32,9 @@ export default {
       blogDetail() {
         return this.$store.getters.getBlogByTitle(this.$route.params.english_title);
       },
-      blogTitle() {
-        return this.blogDetail.title;
-      }
+      // blogTitle() {
+      //   return this.blogDetail.title;
+      // }
     },
     mounted: function() {
         if (this.loadBlogDetail()) {
