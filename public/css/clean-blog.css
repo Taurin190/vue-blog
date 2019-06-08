@@ -116,7 +116,7 @@ img::-moz-selection {
 }
 
 .main-contents {
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 .main-contents.error-message {
@@ -488,13 +488,14 @@ article .title-pane {
 article span.published_date {
   color: #777;
   padding-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 article h2 {
   color: #555;
   font-size: 25px;
   margin-top: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   padding-bottom: 10px;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -504,7 +505,7 @@ article p {
   line-height: 1.5;
   color: #555;
   font-weight: 400;
-  margin: 0 0 1.5em;
+  margin: 0 0 1em;
 }
 
 .main.container {

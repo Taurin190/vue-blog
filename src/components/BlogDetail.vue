@@ -5,12 +5,18 @@
         <div v-if="this.blogDetail" class="main-contents col-lg-8 col-md-10 mx-auto">
           <h1>{{ this.blogDetail.title }}</h1>
           <span class="published_date">{{ this.blogDetail.published_date }}</span>
-          <div v-html="this.blogDetail.blog_body"></div>
+          <div class="blog_body" v-html="this.blogDetail.blog_body"></div>
         </div>
       </div>
     </div>
   </article>
 </template>
+<style>
+div.blog_body {
+  margin-top: 60px;
+}
+</style>
+
 <script>
 import {firebaseDB} from '../main'
 
