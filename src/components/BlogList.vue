@@ -52,7 +52,7 @@ export default {
     },
     computed : {
       storedBlogList () {
-        return this.$store.state.blogList;
+        return this.$store.getters.getBlogList;
       },
       storedBlogListLength () {
         return this.$store.state.blogList.length;
