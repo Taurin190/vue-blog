@@ -64,7 +64,6 @@ export default {
     },
     methods: {
       loadBlogList() {
-        // if (this.$store.state.blogList.length > 0) return;
         var vm = this;
         const blogs = firebaseDB.collection('blogs');
         blogs.get().then( (snap) => {
