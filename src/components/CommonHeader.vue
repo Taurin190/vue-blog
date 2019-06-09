@@ -53,4 +53,11 @@ export default {
     name: 'common-header'
 }
 </script>
+<style>
+ul.dropdown-menu-right {
+  right: 20px;
+  left: 65%;
+}
+</style>
+
 
