@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <ProfileOverview />
+      <ProfileOverview class="main-contents" />
       <SocialActivity />
   </div>
 </template>
