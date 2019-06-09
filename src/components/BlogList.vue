@@ -14,6 +14,7 @@
             </h4>
           </a>
           <p class="post-meta">
+            <i class="far fa-calendar-alt"></i>
             {{ blog.published_date }}
           </p>
         </div>
