@@ -10,6 +10,9 @@
           </span>
           <div class="blog_body" v-html="this.blogDetail.blog_body"></div>
         </div>
+        <div v-else class="main-contents col-lg-8 col-md-10 mx-auto no-blog">
+          <h2 class="loading">読み込み中。</h2>
+        </div>
       </div>
     </div>
   </article>
@@ -17,6 +20,10 @@
 <style>
 div.blog_body {
   margin-top: 60px;
+}
+h2.loading {
+  border-bottom: 0px;
+  text-align: center;
 }
 </style>
 

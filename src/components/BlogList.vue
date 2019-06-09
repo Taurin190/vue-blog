@@ -29,7 +29,7 @@
     </div>
     <div v-else>
       <div class="no-blog">
-        現在公開中のブログはありません。
+        読み込み中。
       </div>
     </div>
   </div>
