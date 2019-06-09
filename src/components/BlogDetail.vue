@@ -34,28 +34,21 @@ export default {
     name: "BlogDetail",
     data() {
       return {
-        blog: Object
-      }
-    },
-    head: {
-      title() {
-        return {
-          inner: this.blogDetail.title + " - Lighting up a Corner"
-        }
+        blog: Object,
       }
     },
     computed: {
       blogDetail() {
         return this.$store.getters.getBlogByTitle(this.$route.params.english_title);
-      },
-      // blogTitle() {
-      //   return this.blogDetail.title;
-      // }
+      }
+    },
+    watch: {
+      blogDetail: function (val) {
+        document.title = val.title + " - Lighting up a Corner"
+      }
     },
     mounted: function() {
-        if (this.loadBlogDetail()) {
-          this.$emit('update-blog-title', this.blogTitle);
-        }
+        this.loadBlogDetail()
     },
     methods: {
         loadBlogDetail() {
