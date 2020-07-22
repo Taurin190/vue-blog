@@ -21,9 +21,9 @@
           <li class="nav-item dropdown-item">
             <router-link class="nav-link" to="/blog">Blog</router-link>
           </li>
-          <li class="nav-item dropdown-item">
+          <!-- <li class="nav-item dropdown-item">
             <router-link class="nav-link" to="/contact">Contact</router-link>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="collapse navbar-collapse">
@@ -40,9 +40,9 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/blog">Blog</router-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link class="nav-link" to="/contact">Contact</router-link>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -50,7 +50,7 @@
 </template>
 <script>
 export default {
-    name: 'common-header'
+  name: 'common-header'
 }
 </script>
 <style>
@@ -59,5 +59,3 @@ ul.dropdown-menu-right {
   left: 65%;
 }
 </style>
-
-
